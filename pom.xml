@@ -12,11 +12,11 @@
     <module>blog-core</module>
     <module>blog-web</module>
     <module>blog-admin</module>
+      <module>blog-generator</module>
   </modules>
 
   <name>blog</name>
   <description>blog system</description>
-
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -30,7 +30,34 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
 
+    <hutool.version>5.5.7</hutool.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.blog</groupId>
+        <artifactId>blog-core</artifactId>
+        <version>1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.blog</groupId>
+        <artifactId>blog-admin</artifactId>
+        <version>1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.blog</groupId>
+        <artifactId>blog-web</artifactId>
+        <version>1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.blog</groupId>
+        <artifactId>blog-generator</artifactId>
+        <version>1.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
 
   <dependencies>
     <dependency>
@@ -38,22 +65,25 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-core</artifactId>
+      <version>${hutool.version}</version>
+      <scope>compile</scope>
     </dependency>
 
   </dependencies>
