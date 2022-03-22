@@ -1,13 +1,13 @@
-package com.lt.blog.admin;
+package com.lt.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlogAdminApplication {
+public class BlogWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BlogAdminApplication.class, args);
+        SpringApplication.run(BlogWebApplication.class, args);
     }
 
 }
